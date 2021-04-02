@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        <h3>Upload local file</h3>
+        <label for="filedatapath">Full path file address:</label>
+        <input type="text" name="filedatapath" id="filedatapath" />
+        <label for="tablename">Table name : </label>
+        <input type="text" id="tablename" name="tablename" />
+        <br />
+        <label>field terminator : </label>
+        <input type="text" value="," name="fieldterminator" />
+        <input type="text" value="\\n" name="rowterminator" />
+        <br />
+        <input type="submit" value="Transform" style="margin-top:20px" />
+    </form>
+   
+</body>
+</html>
